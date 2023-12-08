@@ -15,19 +15,9 @@ export const Navigation = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="LoginView"
+        name="Login"
         component={LoginScreen}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Category"
-        component={CategoryScreen}
-        options={{headerShown: false}}
-      />
-      <Stack.Screen
-        name="Shorts"
-        component={ShortsScreen}
-        options={{headerShown: false}}
+        options={{headerShown: true}}
       />
     </Stack.Navigator>
   );

@@ -9,7 +9,6 @@ import React, {useRef} from 'react';
 import {QueryClientProvider, createQueryClient} from './libs/react-query';
 import {useAppMount} from './App.hooks';
 import Toast from 'react-native-toast-message';
-import {Navigation} from './Navigation';
 import BottomNavigator from './components/BottomMenu/BottomNavigator';
 
 const navigationTheme: Theme = {

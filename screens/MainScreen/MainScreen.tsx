@@ -8,11 +8,9 @@ const MainScreen = () => {
   const navigation = useNavigation();
 
   return (
-    // <MainLayout>
     <SafeAreaView>
       <Text>냥</Text>
     </SafeAreaView>
-    // </MainLayout>
   );
 };
 export default MainScreen;
