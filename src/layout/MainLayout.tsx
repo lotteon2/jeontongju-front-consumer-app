@@ -1,5 +1,4 @@
-import {SafeAreaView} from 'react-native';
-import BottomNavigator from '../components/BottomMenu/BottomNavigator';
+import BottomNavigator from '../../components/BottomMenu/BottomNavigator';
 
 const MainLayout = ({children}) => {
   return (
