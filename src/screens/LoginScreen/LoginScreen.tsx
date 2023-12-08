@@ -2,6 +2,7 @@ import styled from '@emotion/native/macro';
 import {Text, Button, View} from 'react-native';
 import {useLoginScreen} from './LoginScreen.hooks';
 import {getColor} from '../../libs/core/colors';
+import {CustomButton} from '../../common/Button/Button';
 
 const LoginScreen = () => {
   const {
@@ -11,11 +12,13 @@ const LoginScreen = () => {
     setPassword,
     handleFormLogin,
     handleSignUp,
+    handleForgetPassword,
+    handleKakaoLogin,
   } = useLoginScreen();
   return (
     <Container>
       <View>
-        <Text>이메일로 로그인</Text>
+        <StyledFormLoginText>이메일로 로그인</StyledFormLoginText>
         <StyledInput
           onChangeText={setEmail}
           value={email}
@@ -27,14 +30,23 @@ const LoginScreen = () => {
           placeholder="비밀번호 입력"
           secureTextEntry
         />
-        <StyledButton title="로그인" onPress={handleFormLogin} />
-        <Text>비밀번호 찾기</Text>
+        <CustomButton content="로그인" onPress={handleFormLogin} />
+        <StyledForgetPasswordText onPress={handleForgetPassword}>
+          비밀번호를 잊으셨나요?
+        </StyledForgetPasswordText>
       </View>
       <View>
-        <Text>소셜 계정으로 전통주점을 이용해보세요</Text>
+        <StyledFormLoginText>
+          소셜 계정으로 전통주점을 이용해보세요
+        </StyledFormLoginText>
+        <CustomButton content="카카오 로그인" onPress={handleKakaoLogin} />
       </View>
       <View>
-        <Button title="이메일로 가입하기" onPress={handleSignUp} />
+        <CustomButton
+          content="이메일로 가입하기"
+          onPress={handleSignUp}
+          btnType="text"
+        />
       </View>
     </Container>
   );
@@ -44,8 +56,12 @@ export default LoginScreen;
 
 const Container = styled.SafeAreaView`
   flex: 1;
-  align-items: center;
   justify-content: center;
+`;
+
+const StyledFormLoginText = styled.Text`
+  padding: 8px;
+  font-size: 16px;
 `;
 
 const StyledInput = styled.TextInput`
@@ -56,17 +72,7 @@ const StyledInput = styled.TextInput`
   font-size: 16px;
 `;
 
-const StyledButton = styled.Button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 335px;
-  width: 100%;
-  height: 44px;
-  border-radius: 4px;
-  border-color: ${getColor('primary')};
-  border-width: 1px;
-  background-color: ${getColor('primary')};
-  margin-bottom: 0px;
-  margin-top: 12px;
+const StyledForgetPasswordText = styled.Text`
+  color: ${getColor('lightGray')};
+  padding: 8px;
 `;

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {SafeAreaView, Text} from 'react-native';
-import BottomNavigator from '../../components/BottomMenu/BottomNavigator';
+import BottomNavigator from '../../../components/BottomMenu/BottomNavigator';
 import MainLayout from '../../layout/MainLayout';
 import {useNavigation} from '@react-navigation/native';
 

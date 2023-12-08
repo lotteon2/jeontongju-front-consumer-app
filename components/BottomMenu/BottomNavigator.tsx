@@ -1,10 +1,10 @@
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 // import Icon from 'react-native-vector-icons/MaterialIcons';
 import Icon from 'react-native-vector-icons/AntDesign';
-import MainScreen from '../../screens/MainScreen/MainScreen';
-import MyPageScreen from '../../screens/MyPageScreen/MyPageScreen';
-import ShortsScreen from '../../screens/ShortsScreen/ShortsScreen';
-import CategoryScreen from '../../screens/CategoryScreen/CategoryScreen';
+import MainScreen from '../../src/screens/MainScreen/MainScreen';
+import MyPageScreen from '../../src/screens/MyPageScreen/MyPageScreen';
+import ShortsScreen from '../../src/screens/ShortsScreen/ShortsScreen';
+import CategoryScreen from '../../src/screens/CategoryScreen/CategoryScreen';
 import {Navigation} from '../../Navigation';
 
 const Tab = createMaterialBottomTabNavigator();
