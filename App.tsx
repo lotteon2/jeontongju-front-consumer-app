@@ -10,6 +10,8 @@ import {QueryClientProvider, createQueryClient} from './libs/react-query';
 import {useAppMount} from './App.hooks';
 import Toast from 'react-native-toast-message';
 import {Navigation} from './Navigation';
+import BottomNavigator from './components/BottomMenu/BottomNavigator';
+
 const navigationTheme: Theme = {
   ...DefaultTheme,
   colors: {
@@ -26,7 +28,7 @@ export const App = () => {
     <NavigationContainer theme={navigationTheme}>
       <ThemeProvider>
         <QueryClientProvider client={queryClientRef.current}>
-          <Navigation />
+          <BottomNavigator />
           <Toast />
         </QueryClientProvider>
       </ThemeProvider>
