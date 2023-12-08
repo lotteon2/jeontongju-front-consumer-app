@@ -5,6 +5,12 @@ import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint.fabricEnabled
 import com.facebook.react.defaults.DefaultReactActivityDelegate
 
+
+@Override
+  protected String getMainComponentName() {
+    return "app-name";
+  }
+  
 class MainActivity : ReactActivity() {
 
   /**
